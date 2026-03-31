@@ -1,0 +1,89 @@
+1)
+Class Greeting
+{
+ public static void main (String [] args)
+ {
+   System.out.println("Good Morning");
+ }
+}
+
+2)
+Class Evening
+{
+ public static void main (String [] args)
+ {
+   System.out.println("Good Evening");
+ }
+}
+
+3)
+Class Night
+{
+ public static void main (String [] args)
+ {
+   System.out.println("Good Night");
+ }
+}
+
+4)
+Class Java
+{
+ public static void main (String [] args)
+ {
+   System.out.println("Java is Powerful");
+ }
+}
+
+5)
+Class Practice
+{
+ public static void main (String [] args)
+ {
+   System.out.println("Practice makes Perfect");
+ }
+}
+
+6)
+Class Success
+{
+ public static void main (String [] args)
+ {
+   System.out.println("Success is yours");
+ }
+}
+
+7)
+Class Learn
+{
+ public static void main (String [] args)
+ {
+   System.out.println("Keep Learning");
+ }
+}
+
+8)
+Class Code
+{
+ public static void main (String [] args)
+ {
+   System.out.println("Coding is fun");
+ }
+}
+
+9)
+Class Future
+{
+ public static void main (String [] args)
+ {
+   System.out.println("Future Developer");
+ }
+}
+
+10)
+Class Aim
+{
+ public static void main (String [] args)
+ {
+   System.out.println("Achieve your goals");
+ }
+}
