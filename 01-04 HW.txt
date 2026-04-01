@@ -1,0 +1,57 @@
+1)
+class Basic
+{
+public static void main(String [] args)
+{
+ String name ="HARI";
+ int age =17;
+ char grade='B';
+ boolean passed = true;
+ System.out.println ("NAME: " + name );
+ System.out.println ("AGE: " + age );
+ System.out.println ("GRADE: " + grade );
+ System.out.println ("PASSED: " + passed );
+
+}}
+
+2)
+class Average
+{
+public static void main(String [] args)
+{
+ 
+ int MARK1 =80;
+ int MARK2 = 90;
+ int MARK3 = 70;
+ int avg;
+ int total;
+ total = (MARK1+MARK2+MARK3);
+ avg=(MARK1+MARK2+MARK3)/3;
+ System.out.println("TOTAL =" + total);
+ System.out.println("AVG =" + avg);
+
+}}
+
+3)
+class Arun
+{
+public static void main(String [] args)
+{
+  byte B=10;
+  short S = 200; 
+  int  I = 5000; 
+  long L = 100000L; 
+  float F = 5.5F; 
+  double D = 123.456; 
+  char C = 'Z'; 
+  boolean OK = false; 
+  System.out.println("BYTE:" + B);
+  System.out.println("SHORT:" + S);
+  System.out.println("INT:" + I);
+  System.out.println("LONG:" + L);
+  System.out.println("FLOAT:" + F);
+  System.out.println("DOUBLE:" + D);
+  System.out.println("CHAR:" + C);
+  System.out.println("BOOLEAN:" + OK);
+}
+}
