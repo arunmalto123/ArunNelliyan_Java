@@ -1,0 +1,78 @@
+1)
+class Arithmetic
+{
+ public static void main(String [] args)
+ {
+ int a=20;
+ int b=10;
+ int add=a+b;
+ int sub=a-b;
+ int mul=a*b;
+ int div=a/b;
+ System.out.println("result of "+ "add :"+ add +" sub is:"+sub+" mul is :"+mul+" dov is:"+div); 
+ }
+}
+2)
+class Assign
+{
+ public static void main(String [] args)
+ {
+ int a=10;
+ System.out.println("Initial value of a :" + a);
+ a += 5; //a=a+5; 15
+ System.out.println("value of a after += " + a); 
+ a -= -3; //a=a-3; 18
+ System.out.println("value of a after -= " + a); 
+ a *= 2; //a=a*2; 36
+ System.out.println("value of a after *= " + a);
+a /= 4; //a=a/4;9
+System.out.println("value of a after /= " + a);  
+ }
+}
+3)
+class Relation
+{
+ public static void main(String [] args)
+ {
+ int a=10;
+ int b=20;
+ boolean res1=(a>b); //false
+ System.out.println("value of > res1 " + res1);
+ boolean res2=(a<b); //true
+ System.out.println("value of < res2 " + res2);
+ boolean res3=(a==b); //false
+ System.out.println("value of == res3 " + res3);
+ boolean res4 = (a!=b); //true
+ System.out.println("value of != res4 " + res4);
+ }
+}
+4)
+class Logic
+{
+ public static void main(String [] args)
+ {
+ int a=10;
+ int b=5;
+ boolean and=(a>b && b>a); //false
+ System.out.println("value of && AND " + and);
+ boolean or=(a>b || b<a ); //true
+ System.out.println("value of || OR " + or);
+ boolean not=!(a==b); //true
+ System.out.println("value of ! NOT  " + not);
+ }
+}
+5)
+class Mixed
+{
+ public static void main(String [] args)
+ {
+ int a=10;
+ int b=5;
+ int c=15;
+ boolean eval= (c-(a+b)) >= (a-(c-b)); //true
+ boolean fi = !(eval); //false
+ System.out.println(eval);
+ System.out.println(fi);
+ 
+ }
+}
