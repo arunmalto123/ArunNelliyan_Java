@@ -1,0 +1,35 @@
+1)
+class Arithmetic
+{
+ public static void main(String [] args)
+ {
+ int a=20;
+ int b=10;
+ int add=a+b;
+ int sub=a-b;
+ int mul=a*b;
+ int div=a/b;
+ System.out.println("result of "+ "add :"+ add +" sub is:"+sub+" mul is :"+mul+" dov is:"+div); 
+ }
+}
+2)
+class Relation
+{
+ public static void main(String [] args)
+ {
+ int a=10;
+ int b=20;
+ boolean res1=(a>b); //false
+ System.out.println("value of > res1 " + res1);
+ boolean res2=(a<b); //true
+ System.out.println("value of < res2 " + res2);
+ boolean res3=(a==b); //false
+ System.out.println("value of == res3 " + res3);
+ boolean res4 = (a!=b); //true
+ System.out.println("value of != res4 " + res4);
+ boolean res5 = (a>=b); //false
+ System.out.println("value of >= res5 " + res5);
+ boolean res6 = (a <=b); //true
+ System.out.println("value of <= res6 " + res6);
+ }
+}
