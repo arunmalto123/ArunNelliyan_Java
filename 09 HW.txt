@@ -1,0 +1,89 @@
+1)
+import java.util.Scanner;
+class oddEven
+{
+	public static void main (String [] args)
+	{
+		
+		System.out.println("Enter number:");
+		Scanner scanner =new Scanner(System.in);
+		int num =scanner.nextInt();
+		if (num % 2 == 0)
+		{
+			System.out.println("given num :"+ num + " is even number");
+		}
+		else 
+		{
+			System.out.println("given num :"+num+" is odd number");
+		}
+		
+	}
+}
+2)
+import java.util.Scanner;
+class posNeg
+{
+	public static void main (String [] args)
+	{
+		
+		System.out.println("Enter number:");
+		Scanner scanner =new Scanner(System.in);
+		int num =scanner.nextInt();
+		if (num > 0)
+		{
+			System.out.println("given num :"+ num + " is positive number");
+		}
+		else if(num < 0)
+		{
+			System.out.println("given num :"+num+" is negative number");
+		}
+		else 
+		{
+			System.out.println("given number is neither positive or negative");
+		}
+	}
+}
+3)
+import java.util.Scanner;
+class Days
+{
+ public static void main(String [] args)
+ {
+	 int num = 7;
+	 switch (num)
+	 {
+		 case 1:
+		 {
+			 System.out.println("Monday");
+		 }
+		 case 2:
+		 {
+			 System.out.println("Tuesday");
+		 }
+		 case 3:
+		 {
+			 System.out.println("Wednesday");
+		 }
+		 case 4:
+		 {
+			 System.out.println("Thursday");
+		 }
+		 case 5:
+		 {
+			 System.out.println("Friday");
+		 }
+		 case 6:
+		 {
+			 System.out.println("Saturday");
+		 }
+		 case 7:
+		 {
+			 System.out.println("Sunday");
+		 }
+		 default :
+		 {
+			 System.out.println("onnum ila");
+		 }
+	 }
+ }
+ }
