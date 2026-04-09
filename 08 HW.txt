@@ -1,0 +1,94 @@
+1)
+import java.util.Scanner;
+class Traffic
+{
+	public static void main (String [] args)
+	{
+		
+		System.out.println("Enter input fpr signal colour (R,Y,G):");
+		Scanner scanner =new Scanner(System.in);
+		char input =scanner.next().toUpperCase().charAt(0);
+		if(input == 'R')
+		{
+			System.out.println("STOP");
+		}
+		if(input == 'Y')
+		{
+			System.out.println("READY");
+		}
+		if(input == 'G')
+		{
+			System.out.println("GO");
+		}
+		
+	}
+}
+
+2)
+import java.util.Scanner;
+class Ticket
+{
+	public static void main (String [] args)
+	{
+		
+		System.out.println("Enter age:");
+		Scanner scanner =new Scanner(System.in);
+		int age =scanner.nextInt();
+		if(age < 12)
+		{
+			System.out.println("Ticket price is 80");
+		}
+		else
+		{
+			System.out.println("ticket price is above 80");
+		}
+		if((age >= 12) && (age <= 59))
+		{
+			System.out.println("Ticket price is 150");
+		}
+		else
+		{
+			System.out.println("Ticket price is either 80 or 150");
+		}
+		if(age > 60)
+		{
+			System.out.println("Ticket price is 100");
+		}
+		else
+		{
+			System.out.println("enjoy the movie");
+		}
+		
+	}
+}
+
+3)
+import java.util.Scanner;
+class Battery
+{
+	public static void main (String [] args)
+	{
+		
+		System.out.println("Enter battery percentage:");
+		Scanner scanner =new Scanner(System.in);
+		int batteryPer =scanner.nextInt();
+		if(batteryPer >= 80 && batteryPer <=100)
+		{
+			System.out.println("Battery full");
+		}
+		else if (batteryPer >= 30 && batteryPer <= 79)
+		{
+			System.out.println("Battery Normal");
+		}
+		else if(batteryPer < 30)
+		{
+			System.out.println("Battery Low");
+		}
+		else 
+		{
+			System.out.println("Invalid batter percentage input");
+		}
+		
+		
+	}
+}
