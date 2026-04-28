@@ -1,0 +1,168 @@
+1)
+import java.util.Scanner;
+
+public class MarksSystem {
+	
+    static int[] marks = new int[5]; 
+    static int totalMarks = 0;
+    static double avgMarks = 0.0;
+    static boolean marksEntered = false;
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int choice;
+
+        do {
+            System.out.println("\n--- Student Marks System ---");
+            System.out.println("1. Enter marks (5 subjects)");
+            System.out.println("2. Calculate total");
+            System.out.println("3. Calculate average");
+            System.out.println("4. Find grade");
+            System.out.println("5. Exit");
+            System.out.print("Enter your choice: ");
+            choice = sc.nextInt();
+
+            switch (choice) {
+                case 1:
+                    getMarks(sc);
+                    break;
+                case 2:
+                    if (marksEntered) {
+                        totalMarks = total();
+                        System.out.println("Total Marks: " + totalMarks);
+                    } else {
+                        System.out.println("Please enter marks first!");
+                    }
+                    break;
+                case 3:
+                    if (marksEntered) {
+                        avgMarks = average();
+                        System.out.println("Average Marks: " + avgMarks);
+                    } else {
+                        System.out.println("Please enter marks first!");
+                    }
+                    break;
+                case 4:
+                    if (marksEntered) {
+                        System.out.println("Final Grade: " + grade());
+                    } else {
+                        System.out.println("Please enter marks first!");
+                    }
+                    break;
+                case 5:
+                    System.out.println("Exiting... Goodbye!");
+                    break;
+                default:
+                    System.out.println("Invalid choice! Try again.");
+            }
+        } while (choice != 5);
+        
+        sc.close();
+    }
+
+    // Function to input marks
+    public static void getMarks(Scanner sc) {
+        System.out.println("Enter marks for 5 subjects (out of 100):");
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Subject " + (i + 1) + ": ");
+            marks[i] = sc.nextInt();
+        }
+        marksEntered = true;
+        System.out.println("Marks recorded successfully.");
+    }
+
+    // Function to calculate total
+    public static int total() {
+        int sum = 0;
+        for (int m : marks) {
+            sum += m;
+        }
+        return sum;
+    }
+
+    // Function to calculate average
+    public static double average() {
+        return total() / 5.0;
+    }
+
+    // Function to determine grade
+    public static String grade() {
+        double avg = average();
+        if (avg >= 90) return "A+";
+        else if (avg >= 80) return "A";
+        else if (avg >= 70) return "B";
+        else if (avg >= 60) return "C";
+        else if (avg >= 50) return "D";
+        else return "Fail";
+    }
+}
+
+2)
+
+import java.util.Scanner;
+
+public class BankingSystem {
+    static double balance = 0.0;
+    static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int choice;
+
+        do {
+            System.out.println("\n--- BANK MENU ---");
+            System.out.println("1. Deposit");
+            System.out.println("2. Withdraw");
+            System.out.println("3. Check Balance");
+            System.out.println("4. Exit");
+            System.out.print("Enter your choice: ");
+            
+            choice = sc.nextInt();
+
+            switch (choice) {
+                case 1:
+                    deposit();
+                    break;
+                case 2:
+                    withdraw();
+                    break;
+                case 3:
+                    checkBalance();
+                    break;
+                case 4:
+                    System.out.println("Exiting... Thank you!");
+                    break;
+                default:
+                    System.out.println("Invalid choice! Please try again.");
+            }
+        } while (choice != 4);
+    }
+
+
+    public static void deposit() {
+        System.out.print("Enter amount to deposit: ");
+        double amount = sc.nextDouble();
+        if (amount > 0) {
+            balance += amount;
+            System.out.println("Successfully deposited: $" + amount);
+        } else {
+            System.out.println("Invalid amount!");
+        }
+    }
+
+    public static void withdraw() {
+        System.out.print("Enter amount to withdraw: ");
+        double amount = sc.nextDouble();
+        if (amount > balance) {
+            System.out.println("Insufficient balance!");
+        } else if (amount <= 0) {
+            System.out.println("Invalid amount!");
+        } else {
+            balance -= amount;
+            System.out.println("Successfully withdrawn: $" + amount);
+        }
+    }
+
+    public static void checkBalance() {
+        System.out.println("Current Balance: $" + balance);
+    }
+}
