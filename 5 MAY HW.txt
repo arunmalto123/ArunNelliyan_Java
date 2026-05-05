@@ -1,0 +1,44 @@
+1)
+class PBV1
+{
+	public static void main(String[] args)
+	{
+		int a=30;
+		System.out.println("BEFORE CALLING:" + a);
+		PBV1 t1=new PBV1();
+		t1.display(a);
+
+	}
+	void display(int a)
+	{
+		a=50;
+		System.out.println("after calling:" + a);	
+	}
+
+}
+
+2)
+class PBR1
+{
+	public static void main(String[] args)
+	{
+		int age[]={18,20,25};
+		System.out.println("before calling:");
+		System.out.println(age[0]);
+		System.out.println(age[1]);
+		System.out.println(age[2]);
+		PBR1 t3=new PBR1();
+		t3.display(age);
+		
+	}
+	void display(int ar[])
+	{
+		ar[0]=100;
+        ar[2]=1999;
+		System.out.println("after calling:");
+		System.out.println(ar[0]);
+		System.out.println(ar[1]);
+		System.out.println(ar[2]);
+	}
+
+}
