@@ -1,0 +1,61 @@
+import java.util.Scanner;
+
+public class Widening {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter integer:");
+        int num = scanner.nextInt();
+        double doubleNum = num;
+        
+        System.out.println(doubleNum);
+        
+        scanner.close();
+    }
+}
+
+import java.util.Scanner;
+
+public class Widening1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter character:");
+        char ch = scanner.next().charAt(0);
+        int asciiValue = ch;
+        
+        System.out.println(asciiValue);
+        
+        scanner.close();
+    }
+}
+
+import java.util.Scanner;
+
+public class Narrowing {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+         System.out.println("enter double value:");
+        double num = scanner.nextDouble();
+    
+        int intNum = (int) num;
+        byte byteNum = (byte) num;
+        System.out.println(intNum);
+		System.out.println(byteNum);
+        
+        scanner.close();
+    }
+}
+
+import java.util.Scanner;
+
+public class Narrowing1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+         System.out.println("enter integer  value:");
+        int  num = scanner.nextInt();
+    
+        byte byteNum=(byte)num;
+		System.out.println(byteNum);
+        
+        scanner.close();
+    }
+}
