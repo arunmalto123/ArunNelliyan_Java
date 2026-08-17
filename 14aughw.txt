@@ -1,0 +1,167 @@
+import java.util.Scanner;
+
+class BankAccount {
+    private double balance;
+
+    public BankAccount(double initialBalance) {
+        this.balance = initialBalance;
+    }
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            System.out.println("Amount deposited successfully.");
+        } else {
+            System.out.println("Invalid deposit amount.");
+        }
+    }
+
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            System.out.println("Amount withdrawn successfully.");
+        } else {
+            System.out.println("Insufficient balance or invalid amount.");
+        }
+    }
+
+    public void displayBalance() {
+        System.out.println("Balance = " + (int) balance);
+    }
+}
+
+public class BankAccount1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        BankAccount account = new BankAccount(1000);
+
+        boolean isRunning = true;
+
+        while (isRunning) {
+            System.out.println("\n--- BANK ACCOUNT MENU ---");
+            System.out.println("1. Deposit");
+            System.out.println("2. Withdraw");
+            System.out.println("3. Display Balance");
+            System.out.println("4. Exit");
+            System.out.print("Enter your choice: ");
+
+            int choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter amount to deposit: ");
+                    double depositAmount = scanner.nextDouble();
+                    account.deposit(depositAmount);
+                    break;
+
+                case 2:
+                    System.out.print("Enter amount to withdraw: ");
+                    double withdrawAmount = scanner.nextDouble();
+                    account.withdraw(withdrawAmount);
+                    break;
+
+                case 3:
+                    account.displayBalance();
+                    break;
+
+                case 4:
+                    System.out.println("Exit");
+                    isRunning = false;
+                    break;
+
+                default:
+                    System.out.println("Invalid choice. Please choose between 1 and 4.");
+                    break;
+            }
+        }
+
+        scanner.close();
+    }
+}
+
+
+2)
+import java.util.Scanner;
+
+class Student {
+    private String name;
+    private int rollNo;
+    private boolean isSaved = false;
+
+    public void addDetails(String name, int rollNo) {
+        this.name = name;
+        this.rollNo = rollNo;
+        this.isSaved = true;
+        System.out.println("Student details saved.");
+    }
+
+    public void updateName(String newName) {
+        if (isSaved) {
+            this.name = newName;
+            System.out.println("Student name updated successfully.");
+        } else {
+            System.out.println("No student record found to update.");
+        }
+    }
+
+    public void displayDetails() {
+        if (isSaved) {
+            System.out.println("Name: " + name);
+            System.out.println("Roll No: " + rollNo);
+        } else {
+            System.out.println("No student details available.");
+        }
+    }
+}
+
+public class StudentM {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Student student = new Student();
+
+        boolean isRunning = true;
+
+        while (isRunning) {
+            System.out.println("\n--- STUDENT MANAGEMENT MENU ---");
+            System.out.println("1. Add student details");
+            System.out.println("2. Update student name");
+            System.out.println("3. Display student details");
+            System.out.println("4. Exit");
+            System.out.print("Enter your choice: ");
+
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // Consume newline leftover from nextInt()
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter Student Name: ");
+                    String name = scanner.nextLine();
+                    System.out.print("Enter Roll Number: ");
+                    int rollNo = scanner.nextInt();
+                    student.addDetails(name, rollNo);
+                    break;
+
+                case 2:
+                    System.out.print("Enter New Name: ");
+                    String newName = scanner.nextLine();
+                    student.updateName(newName);
+                    break;
+
+                case 3:
+                    student.displayDetails();
+                    break;
+
+                case 4:
+                    System.out.println("Exited");
+                    isRunning = false;
+                    break;
+
+                default:
+                    System.out.println("Invalid choice. Please choose between 1 and 4.");
+                    break;
+            }
+        }
+
+        scanner.close();
+    }
+}
